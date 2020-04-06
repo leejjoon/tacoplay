@@ -4,9 +4,9 @@ localrepo_enabled: false
 docker_insecure_registries: ""
 
 # ceph
-monitor_interface: bond0
-public_network: 147.75.94.0/24
-cluster_network: 147.75.94.0/24
+monitor_interface: eth0
+public_network: 192.168.0.0/24
+cluster_network: 192.168.0.0/24
 
 ceph_conf_overrides:
       global:
@@ -22,8 +22,8 @@ ceph_conf_overrides:
 
 osd_objectstore: bluestore
 lvm_volumes:
-#  - data: /dev/sda
-#  - data: /dev/sdb
+  - data: /dev/vdb
+  - data: /dev/vdc
 
 openstack_config: true
 kube_pool:

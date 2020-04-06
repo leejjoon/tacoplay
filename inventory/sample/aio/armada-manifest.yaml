@@ -42,7 +42,7 @@ data:
       helm_tests: false
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm-infra
+    location: /home/taco/tacoplay/charts/openstack-helm-infra
     subpath: ceph-provisioners
     reference: taco-v19.03
   dependencies:
@@ -198,7 +198,7 @@ data:
           default: /v2/%(tenant_id)s
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm
+    location: /home/taco/tacoplay/charts/openstack-helm
     subpath: cinder
     reference: taco-v19.03
   test:
@@ -337,7 +337,7 @@ data:
         statefulset: null
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm
+    location: /home/taco/tacoplay/charts/openstack-helm
     subpath: glance
     reference: taco-v19.03
   test:
@@ -453,7 +453,7 @@ data:
         statefulset: null
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm
+    location: /home/taco/tacoplay/charts/openstack-helm
     subpath: heat
     reference: taco-v19.03
   test:
@@ -473,7 +473,7 @@ data:
   values: {}
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm-infra
+    location: /home/taco/tacoplay/charts/openstack-helm-infra
     subpath: helm-toolkit
     reference: taco-v19.03
   dependencies: []
@@ -588,7 +588,7 @@ data:
             password: password
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm
+    location: /home/taco/tacoplay/charts/openstack-helm
     subpath: horizon
     reference: taco-v19.03
   dependencies:
@@ -635,7 +635,7 @@ data:
         error_page: 1
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm-infra
+    location: /home/taco/tacoplay/charts/openstack-helm-infra
     subpath: ingress
     reference: taco-v19.03
   dependencies:
@@ -741,7 +741,7 @@ data:
         statefulset: null
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm
+    location: /home/taco/tacoplay/charts/openstack-helm
     subpath: keystone
     reference: taco-v19.03
   test:
@@ -790,7 +790,7 @@ data:
       daemonset_libvirt: true
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm-infra
+    location: /home/taco/tacoplay/charts/openstack-helm-infra
     subpath: libvirt
     reference: taco-v19.03
   dependencies:
@@ -848,7 +848,7 @@ data:
           scrape: false
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm-infra
+    location: /home/taco/tacoplay/charts/openstack-helm-infra
     subpath: mariadb
     reference: taco-v19.03
   test:
@@ -887,7 +887,7 @@ data:
           scrape: false
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm-infra
+    location: /home/taco/tacoplay/charts/openstack-helm-infra
     subpath: memcached
     reference: taco-v19.03
   dependencies:
@@ -1013,7 +1013,7 @@ data:
       auto_bridge_add:
         br-ex: null
       interface:
-        tunnel: bond0
+        tunnel: eth0
     conf:
       paste:
         composite:neutronapi_v2_0:
@@ -1091,7 +1091,7 @@ data:
       daemonset_l3_agent: true
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm
+    location: /home/taco/tacoplay/charts/openstack-helm
     subpath: neutron
     reference: taco-v19.03
   test:
@@ -1211,9 +1211,9 @@ data:
           port: 30608
     conf:
       hypervisor:
-        host_interface: bond0
+        host_interface: eth0
       libvirt:
-        live_migration_interface: bond0
+        live_migration_interface: eth0
       ceph:
         enabled: true
         admin_keyring: TACO_ADMIN_KEYRING
@@ -1308,7 +1308,7 @@ data:
         novncproxy: 1
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm
+    location: /home/taco/tacoplay/charts/openstack-helm
     subpath: nova
     reference: taco-v19.03
   test:
@@ -1351,7 +1351,7 @@ data:
           uid: 42436
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm-infra
+    location: /home/taco/tacoplay/charts/openstack-helm-infra
     subpath: openvswitch
     reference: taco-v19.03
   dependencies:
@@ -1398,7 +1398,7 @@ data:
             password: password
   source:
     type: local
-    location: /home/centos/tacoplay/charts/openstack-helm-infra
+    location: /home/taco/tacoplay/charts/openstack-helm-infra
     subpath: rabbitmq
     reference: taco-v19.03
   test:
