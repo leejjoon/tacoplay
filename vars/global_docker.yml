@@ -7,7 +7,7 @@ docker_rh_repo_gpgkey: >-
   {%- else -%}https://download.docker.com/linux/centos/gpg{%- endif -%}
 dockerproject_rh_repo_base_url: >-
   {%- if localrepo_enabled -%}http://{{ localrepo_yum }}:{{ localrepo_port }}/dockerproject/repo/main/centos/7
-  {%- else -%}https://download.docker.com/linux/centos/7{%- endif -%}
+  {%- else -%}https://download.docker.com/linux/centos/7/$basearch/stable{%- endif -%}
 dockerproject_rh_repo_gpgkey: >-
   {%- if localrepo_enabled -%}http://{{ localrepo_yum }}:{{ localrepo_port }}/dockerproject/gpg
   {%- else -%}https://download.docker.com/linux/centos/gpg{%- endif -%}
